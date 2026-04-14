@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+  
+  --color-primary: #1a1a1a;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #fcfcfc;
+  --color-secondary-foreground: #111111;
+  
+  --color-muted: #fcfcfc;
+  --color-muted-foreground: #666666;
+  
+  --color-accent: #1a1a1a;
+  --color-accent-foreground: #ffffff;
+  
+  --color-destructive: #e11d48;
+  --color-destructive-foreground: #ffffff;
+  
+  --color-border: #eeeeee;
+  --color-input: #eeeeee;
+  --color-ring: #1a1a1a;
+  
+  --radius-lg: 4px;
+  --radius-md: 2px;
+  --radius-sm: 1px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1 {
+    @apply text-[48px] font-bold leading-[1.1] tracking-[-0.03em] text-[#111111];
+  }
+}
+
+@layer components {
+  .breadcrumb {
+    @apply text-[12px] text-[#666666] uppercase tracking-[0.1em] mb-3;
+  }
+  .status-badge {
+    @apply inline-flex items-center gap-2 text-[14px] font-medium text-[#27ae60] mb-8;
+  }
+  .status-dot {
+    @apply w-2 h-2 bg-[#27ae60] rounded-full;
+  }
+  .footer-note {
+    @apply mt-16 pt-6 border-t border-[#eeeeee] flex flex-wrap gap-10 text-[12px] text-[#666666];
+  }
+  .footer-note b {
+    @apply text-[#111111];
+  }
+}
